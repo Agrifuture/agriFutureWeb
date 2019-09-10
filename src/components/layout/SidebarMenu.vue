@@ -4,17 +4,45 @@
     <router-link tag="li" class="pageLink" to="/">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Dashboard</span>
+        <span class="page">概览</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/tables">
+    <router-link tag="li" class="pageLink" to="/map">
       <a>
         <i class="fa fa-table"></i>
-        <span class="page">Tables</span>
+        <span class="page">地图</span>
       </a>
     </router-link>
 
-    <li class="header">ME</li>
+    <router-link tag="li" class="pageLink" to="/datacenter">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">数据中心</span>
+      </a>
+    </router-link>
+
+    <router-link tag="li" class="pageLink" to="/plan">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">计划</span>
+      </a>
+    </router-link>
+
+    <router-link tag="li" class="pageLink" to="/analysis">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">数据分析</span>
+      </a>
+    </router-link>
+
+    <router-link tag="li" class="pageLink" to="/record">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">记录</span>
+      </a>
+    </router-link>
+
+    <!-- <li class="header">ME</li>
     <router-link tag="li" class="pageLink" to="/tasks">
       <a>
         <i class="fa fa-tasks"></i>
@@ -26,8 +54,8 @@
         <i class="fa fa-cog"></i>
         <span class="page">Settings</span>
       </a>
-    </router-link>
-    <li class="treeview">
+    </router-link> -->
+    <!-- <li class="treeview">
       <a href="#">
         <i class="fa fa-folder-o"></i>
         <span class="treeview-title">Files</span>
@@ -52,9 +80,9 @@
           </a>
         </li>
       </ul>
-    </li>
+    </li> -->
 
-    <li class="header">LOGS</li>
+    <!-- <li class="header">LOGS</li>
     <router-link tag="li" class="pageLink" to="/access">
       <a>
         <i class="fa fa-book"></i>
@@ -73,9 +101,9 @@
         <span class="page">Repos</span>
         <small class="label pull-right bg-green">AJAX</small>
       </a>
-    </router-link>
+    </router-link> -->
 
-    <li class="header">PAGES</li>
+    <!-- <li class="header">PAGES</li>
     <router-link tag="li" class="pageLink" to="/login">
       <a>
         <i class="fa fa-circle-o text-yellow"></i>
@@ -87,7 +115,7 @@
         <i class="fa fa-circle-o text-red"></i>
         <span class="page"> 404</span>
       </a>
-    </router-link>
+    </router-link> -->
   </ul>
 </template>
 <script>

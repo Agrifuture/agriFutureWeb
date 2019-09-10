@@ -20,6 +20,7 @@
       </div>
 
       <!-- search form (Optional) -->
+      <!-- 搜索框 -->
       <form v-on:submit.prevent class="sidebar-form" id="searchForm">
         <div class="input-group" id="searchContainer">
           <span class="input-group-btn">

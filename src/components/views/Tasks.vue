@@ -5,7 +5,7 @@
       <ul class="timeline">
         <!-- timeline time label -->
         <li class="time-label">
-          <span class="bg-green">{{today}}</span>
+          <span class="bg-green">{{today}} 1999/06</span>
         </li>
         <!-- timeline item -->
         <li v-for="line in timeline">
@@ -26,6 +26,7 @@
     </div>
   </section>
 </template>
+
 <script>
   import moment from 'moment'
   import {timeline} from '../../demo'
@@ -41,6 +42,7 @@
       }
     }
   }
+
 </script>
 
 <style>

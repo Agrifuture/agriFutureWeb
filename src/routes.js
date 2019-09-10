@@ -10,6 +10,7 @@ import SettingView from './components/views/Setting.vue'
 import AccessView from './components/views/Access.vue'
 import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
+import MapView from './components/views/Map.vue'
 
 // Routes
 const routes = [
@@ -25,38 +26,47 @@ const routes = [
         path: 'dashboard',
         alias: '',
         component: DashboardView,
-        name: 'Dashboard',
-        meta: {description: 'Overview of environment'}
+        name: '概览',
+        meta: {description: '控制台的总体情况'}
       }, {
-        path: 'tables',
+        path: 'datacenter',
         component: TablesView,
-        name: 'Tables',
-        meta: {description: 'Simple and advance table in CoPilot'}
+        name: '数据中心',
+        meta: {description: '全方位地展示农业生产中的数据'}
       }, {
-        path: 'tasks',
+        path: 'plan',
         component: TasksView,
-        name: 'Tasks',
-        meta: {description: 'Tasks page in the form of a timeline'}
+        name: '计划',
+        meta: {description: '记录并智能指导农业生产'}
       }, {
-        path: 'setting',
+        path: 'record',
         component: SettingView,
         name: 'Settings',
-        meta: {description: 'User settings page'}
+        meta: {description: '农民自我记录'}
       }, {
-        path: 'access',
+        path: 'analysis',
         component: AccessView,
         name: 'Access',
-        meta: {description: 'Example of using maps'}
-      }, {
-        path: 'server',
-        component: ServerView,
-        name: 'Servers',
-        meta: {description: 'List of our servers', requiresAuth: true}
-      }, {
-        path: 'repos',
-        component: ReposView,
-        name: 'Repository',
-        meta: {description: 'List of popular javascript repos'}
+        meta: {description: '大数据分析农业数据'}
+      }, 
+      // {
+      //   path: 'server',
+      //   component: ServerView,
+      //   name: 'Servers',
+      //   meta: {description: 'List of our servers', requiresAuth: true}
+      // }, {
+      //   path: 'repos',
+      //   component: ReposView,
+      //   name: 'Repository',
+      //   meta: {description: 'List of popular javascript repos'}
+      // },
+
+      // new added 
+      {
+        path: 'map',
+        component: MapView,
+        name: 'map',
+        meta: {description: '卫星的遥感俯视图'}
       }
     ]
   }, {
@@ -65,5 +75,7 @@ const routes = [
     component: NotFoundView
   }
 ]
+
+
 
 export default routes

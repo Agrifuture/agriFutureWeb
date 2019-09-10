@@ -27,6 +27,28 @@
       <!-- END timeline item -->
       </ul>
 
+      <ul class="timeline">
+        <!-- timeline time label -->
+        <li class="time-label">
+          <span class="bg-green">{{yesterday}}</span>
+        </li>
+        <!-- timeline item -->
+        <li v-for="line in timeline">
+          <!-- timeline icon -->
+          <i v-bind:class="'fa ' + line.icon + ' bg-' + line.color"></i>
+          <div class="timeline-item">
+            <span class="time"><i class="fa fa-clock-o"></i>&nbsp;{{line.time}}</span>
+            <h3 class="timeline-header">{{line.title}}</h3>
+            <div class="timeline-body" v-if="line.body" v-html="line.body">
+            </div>
+            <div class="timeline-footer" v-if="line.buttons">
+              <a v-for="btn in line.buttons" v-bind:class="'btn btn-' + btn.type + ' btn-xs'" v-bind:href="btn.href" v-bind:target="btn.target">{{btn.message}}</a>
+            </div>
+          </div>
+        </li>
+        <!-- END timeline item -->
+      </ul>
+
 
     </div>
   </section>
@@ -40,8 +62,15 @@
     name: 'Tasks',
     computed: {
       today () {
-        return moment().format('MMM Do YY')
+        return moment().format('MMMM Do YYYY')
       },
+      yesterday(){
+        return moment(new Date()).add(-1,'days').format('MMMM Do YYYY');
+      },
+      tomorrow () {
+          return moment(new Date()).add(1,'days').format('MMMM Do YYYY');
+      },
+
       timeline () {
         return timeline
       }

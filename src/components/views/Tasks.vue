@@ -1,11 +1,14 @@
 <template>
   <section class="content">
     <div class="row center-block">
-      <h1 class="text-center">Tasks</h1>
+      <h1 class="text-center">计划</h1>
+
+
+
       <ul class="timeline">
         <!-- timeline time label -->
         <li class="time-label">
-          <span class="bg-green">{{today}} 1999/06</span>
+          <span class="bg-green">{{today}}</span>
         </li>
         <!-- timeline item -->
         <li v-for="line in timeline">
@@ -23,6 +26,8 @@
         </li>
       <!-- END timeline item -->
       </ul>
+
+
     </div>
   </section>
 </template>

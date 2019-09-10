@@ -43,29 +43,68 @@ export const stats = [{
   text: 'Organic'
 }]
 
-export const timeline = [{
-  icon: 'fa-envelope',
-  color: 'blue',
-  title: 'Write short novel',
-  time: moment().endOf('day').fromNow(),
-  body: 'Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo...',
-  buttons: [{
-    type: 'primary',
-    message: 'Read more',
-    href: 'https://github.com/misterGF/CoPilot',
-    target: '_blank'
+export const timeline =
+[
+  {
+    icon: 'fa-envelope',
+    color: 'orange',
+    title: '施肥',
+    time: moment().endOf('day').fromNow(),
+    body: '农田1：使用肥料1，早晚各一次<br>农田2：使用肥料3，中午一次',
+    buttons: [{type: 'primary',
+      message: '已完成',
+      href: 'https://github.com/misterGF/CoPilot',
+      target: '_blank'},
+
+      {type: 'primary',
+      message: '编辑',
+      href: 'https://github.com/misterGF/CoPilot',
+      target: '_blank'},
+
+      {type: 'primary',
+        message: '删除',
+        href: 'https://github.com/misterGF/CoPilot',
+        target: '_blank'}]},
+  {
+    icon: 'fa-envelope',
+    color: 'blue',
+    title: '浇水',
+    time: moment().endOf('day').fromNow(),
+    body: '农田1：使用肥料1，早晚各一次<br>农田2：使用肥料3，中午一次',
+    buttons: [{type: 'primary',
+      message: '已完成',
+      href: 'https://github.com/misterGF/CoPilot',
+      target: '_blank'},
+
+      {type: 'primary',
+        message: '编辑',
+        href: 'https://github.com/misterGF/CoPilot',
+        target: '_blank'},
+
+      {type: 'primary',
+        message: '删除',
+        href: 'https://github.com/misterGF/CoPilot',
+        target: '_blank'}]},
+  {
+    icon: 'fa-envelope',
+    color: 'red',
+    title: '喷洒农药',
+    time: moment().endOf('day').fromNow(),
+    body: '农田4：使用杀虫剂5，4小时一次<br>农田7：使用杀虫剂2，早晚各一次',
+    buttons: [{type: 'primary',
+      message: '已完成',
+      href: 'https://github.com/misterGF/CoPilot',
+      target: '_blank'},
+
+      {type: 'primary',
+        message: '编辑',
+        href: 'https://github.com/misterGF/CoPilot',
+        target: '_blank'},
+
+      {type: 'primary',
+        message: '删除',
+        href: 'https://github.com/misterGF/CoPilot',
+        target: '_blank'}],
+
   }]
-},
-{
-  icon: 'fa-user',
-  color: 'yellow',
-  title: 'Sarah Young accepted your friend request',
-  time: moment('20150620', 'MMM Do YY').fromNow()
-},
-{
-  icon: 'fa-camera',
-  color: 'purple',
-  title: 'Watch a youTube video',
-  time: moment('20130620', 'YYYYMMDD').fromNow(),
-  body: '<div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube.com/embed/8aGhZQkoFbQ" frameborder="0" allowfullscreen></iframe></div>'
-}]
+

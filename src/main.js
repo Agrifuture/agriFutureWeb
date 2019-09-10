@@ -4,7 +4,7 @@ import 'es6-promise/auto'
 // Import System requirements
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import VueAMap from "vue-amap";
 import { sync } from 'vuex-router-sync'
 import routes from './routes'
 import store from './store'
@@ -22,7 +22,7 @@ Vue.filter('prettyDate', prettyDate)
 Vue.filter('pluralize', pluralize)
 
 Vue.use(VueRouter)
-
+Vue.use(VueAMap);
 // Routing logic
 var router = new VueRouter({
   routes: routes,
@@ -32,6 +32,13 @@ var router = new VueRouter({
     return savedPosition || { x: 0, y: 0 }
   }
 })
+
+VueAMap.initAMapApiLoader({
+  key: '9ce78daa4ab47640105f87f75b44da46',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  // 默认高德 sdk 版本为 1.4.4
+  v: '1.4.4'
+});
 
 // Some middleware to help us ensure the user is authenticated.
 router.beforeEach((to, from, next) => {

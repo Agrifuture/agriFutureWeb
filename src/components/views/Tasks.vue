@@ -3,8 +3,6 @@
     <div class="row center-block">
       <h1 class="text-center">计划</h1>
 
-
-
       <ul class="timeline">
         <!-- timeline time label -->
         <li class="time-label">
@@ -48,7 +46,6 @@
         </li>
         <!-- END timeline item -->
       </ul>
-
 
     </div>
   </section>

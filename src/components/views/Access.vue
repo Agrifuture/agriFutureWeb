@@ -5,7 +5,7 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Striped Full Width Table</h3>
+            <h3 class="box-title">现状评分</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body no-padding table-responsive">
@@ -13,23 +13,23 @@
               <tbody>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th>项目</th>
+                  <th>评分</th>
+                  <th style="width: 40px">分值</th>
                 </tr>
                 <tr>
                   <td>1.</td>
-                  <td>Update software</td>
+                  <td>自动灌溉系统检查</td>
                   <td>
                     <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                      <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
                     </div>
                   </td>
-                  <td><span class="badge bg-red">55%</span></td>
+                  <td><span class="badge bg-red">80%</span></td>
                 </tr>
                 <tr>
                   <td>2.</td>
-                  <td>Clean database</td>
+                  <td>农药喷洒与残留检测</td>
                   <td>
                     <div class="progress progress-xs">
                       <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
@@ -39,7 +39,7 @@
                 </tr>
                 <tr>
                   <td>3.</td>
-                  <td>Cron job running</td>
+                  <td>植株虫害检查</td>
                   <td>
                     <div class="progress progress-xs progress-striped active">
                       <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
@@ -49,7 +49,7 @@
                 </tr>
                 <tr>
                   <td>4.</td>
-                  <td>Fix and squish bugs</td>
+                  <td>大棚温度控制</td>
                   <td>
                     <div class="progress progress-xs progress-striped active">
                       <div class="progress-bar progress-bar-success" style="width: 90%"></div>
@@ -67,12 +67,12 @@
 
     <section class="content">
       <div class="row">
-        <h2>详细数据</h2>
+        <h2>详细数据展示</h2>
         <div class="col-md-6">
           <!-- CHART1 -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">表格1</h3>
+              <h3 class="box-title">近年产量分析</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -92,7 +92,7 @@
           <!-- CHART3 -->
           <div class="box box-danger">
             <div class="box-header with-border">
-              <h3 class="box-title">表格3</h3>
+              <h3 class="box-title">土壤化学成分分析</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -131,7 +131,7 @@
           <!-- CHART2 -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">表格2</h3>
+              <h3 class="box-title">作物构成</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -392,16 +392,16 @@ export default {
       var config = {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          labels: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
           datasets: [{
-            label: 'CoPilot',
+            label: '政府采购',
             fill: false,
             borderColor: '#284184',
             pointBackgroundColor: '#284184',
             backgroundColor: 'rgba(0, 0, 0, 0)',
             data: this.coPilotNumbers
           }, {
-            label: 'Personal Site',
+            label: '市场销售',
             borderColor: '#4BC0C0',
             pointBackgroundColor: '#4BC0C0',
             backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -430,7 +430,7 @@ export default {
       var pieConfig = {
         type: 'pie',
         data: {
-          labels: ['HTML', 'JavaScript', 'CSS'],
+          labels: ['豌豆', '玉米', '草莓'],
           datasets: [{
             data: [56.6, 37.7, 4.1],
             backgroundColor: ['#00a65a', '#f39c12', '#00c0ef'],
@@ -452,19 +452,19 @@ export default {
       new Chart(document.getElementById("Chart3"), {
     type: 'doughnut',
     data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      labels: ["氮", "磷", "钾","硫","碳"],
       datasets: [
         {
           label: "Population (millions)",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+          data: [25.48,54.16,7.61,8.06,4.45]
         }
       ]
     },
     options: {
       title: {
         display: true,
-        text: 'Predicted world population (millions) in 2050'
+        text: '必要化学元素'
       }
     }
 });
@@ -506,12 +506,12 @@ export default {
     new Chart(document.getElementById("Chart5"), {
     type: 'horizontalBar',
     data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      labels: [ "氮", "磷", "钾","硫","碳"],
       datasets: [
         {
           label: "Population (millions)",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+          data: [23,18,34,12,13]
         }
       ]
     },

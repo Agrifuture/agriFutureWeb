@@ -1,7 +1,7 @@
 <template>
   <section class="content">
     <div class="row center-block">
-      <h2>Simple</h2>
+      <h2>今日概览</h2>
       <div class="col-md-12">
         <div class="box">
           <div class="box-header">
@@ -65,8 +65,141 @@
       </div>
     </div>
 
+    <section class="content">
+      <div class="row">
+        <h2>详细数据</h2>
+        <div class="col-md-6">
+          <!-- CHART1 -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">表格1</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="Chart1" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- CHART3 -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">表格3</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="Chart3" style="height:250px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- CHART5 -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">表格5</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="Chart5" style="height:250px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col (LEFT) -->
+        <div class="col-md-6">
+          <!-- CHART2 -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">表格2</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="Chart2" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- CHART4 -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">表格4</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="Chart4" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- CHART6 -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">表格6</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="Chart6" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          
+
+        </div>
+        <!-- /.col (RIGHT) -->
+      </div>
+      <!-- /.row -->
+  
+
+    </section>
+
     <div class="row center-block">
-      <h2>Data tables</h2>
+      <h2>数据表格</h2>
       <div class="col-md-12">
         <div class="box">
           <div class="box-header">
@@ -195,7 +328,27 @@
   </section>
 </template>
 
+<!-- jQuery 3 -->
+<script src="CoPilot/static/js/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="CoPilot/static/js/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="CoPilot/static/js/plugins/chartjs/Chart.js"></script>
+<!-- FastClick <script src="../../bower_components/fastclick/lib/fastclick.js"></script> -->
+
+<!-- AdminLTE App -->
+<script src="CoPilot/static/js/plugins/AdminLTE/app.min.js"></script>
+<!-- AdminLTE for demo purposes <script src="../../dist/js/demo.js"></script> -->
+
+<!-- page script -->
+
 <script>
+
+import Chart from 'chart.js'
+import Alert from '../widgets/Alert'
+import InfoBox from '../widgets/InfoBox'
+import ProcessInfoBox from '../widgets/ProcessInfoBox'
+
 import $ from 'jquery'
 // Require needed datatables modules
 require('datatables.net')
@@ -203,13 +356,222 @@ require('datatables.net-bs')
 
 export default {
   name: 'Tables',
+  components: {
+    Alert,
+    InfoBox,
+    ProcessInfoBox
+  },
+  data () {
+    return {
+      generateRandomNumbers (numbers, max, min) {
+        var a = []
+        for (var i = 0; i < numbers; i++) {
+          a.push(Math.floor(Math.random() * (max - min + 1)) + max)
+        }
+        return a
+      }
+    }
+  },
+  computed: {
+    coPilotNumbers () {
+      return this.generateRandomNumbers(12, 1000000, 10000)
+    },
+    personalNumbers () {
+      return this.generateRandomNumbers(12, 1000000, 10000)
+    },
+    isMobile () {
+      return (window.innerWidth <= 800 && window.innerHeight <= 600)
+    }
+  },
   mounted() {
     this.$nextTick(() => {
       $('#example1').DataTable()
+      
+
+      var ctx = document.getElementById('Chart1').getContext('2d')
+      var config = {
+        type: 'line',
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          datasets: [{
+            label: 'CoPilot',
+            fill: false,
+            borderColor: '#284184',
+            pointBackgroundColor: '#284184',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            data: this.coPilotNumbers
+          }, {
+            label: 'Personal Site',
+            borderColor: '#4BC0C0',
+            pointBackgroundColor: '#4BC0C0',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            data: this.personalNumbers
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: !this.isMobile,
+          legend: {
+            position: 'bottom',
+            display: true
+          },
+          tooltips: {
+            mode: 'label',
+            xPadding: 10,
+            yPadding: 10,
+            bodySpacing: 10
+          }
+        }
+      }
+
+      new Chart(ctx, config) // eslint-disable-line no-new
+
+      var pieChartCanvas = document.getElementById('Chart2').getContext('2d')
+      var pieConfig = {
+        type: 'pie',
+        data: {
+          labels: ['HTML', 'JavaScript', 'CSS'],
+          datasets: [{
+            data: [56.6, 37.7, 4.1],
+            backgroundColor: ['#00a65a', '#f39c12', '#00c0ef'],
+            hoverBackgroundColor: ['#00a65a', '#f39c12', '#00c0ef']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: !this.isMobile,
+          legend: {
+            position: 'bottom',
+            display: true
+          }
+        }
+      }
+
+      new Chart(pieChartCanvas, pieConfig) // eslint-disable-line no-new
+      
+      new Chart(document.getElementById("Chart3"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,734,784,433]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+
+
+      new Chart(document.getElementById("Chart4"), {
+    type: 'radar',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "1950",
+          fill: true,
+          backgroundColor: "rgba(179,181,198,0.2)",
+          borderColor: "rgba(179,181,198,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(179,181,198,1)",
+          data: [8.77,55.61,21.69,6.62,6.82]
+        }, {
+          label: "2050",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          data: [25.48,54.16,7.61,8.06,4.45]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Distribution in % of world population'
+      }
+    }
+});
+
+    new Chart(document.getElementById("Chart5"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,734,784,433]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+
+    new Chart(document.getElementById("Chart6"), {
+    type: 'bar',
+    data: {
+      labels: ["1900", "1950", "1999", "2050"],
+      datasets: [{
+          label: "Europe",
+          type: "line",
+          borderColor: "#8e5ea2",
+          data: [408,547,675,734],
+          fill: false
+        }, {
+          label: "Africa",
+          type: "line",
+          borderColor: "#3e95cd",
+          data: [133,221,783,2478],
+          fill: false
+        }, {
+          label: "Europe",
+          type: "bar",
+          backgroundColor: "rgba(0,0,0,0.2)",
+          data: [408,547,675,734],
+        }, {
+          label: "Africa",
+          type: "bar",
+          backgroundColor: "rgba(0,0,0,0.2)",
+          backgroundColorHover: "#3e95cd",
+          data: [133,221,783,2478]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Population growth (millions): Europe & Africa'
+      },
+      legend: { display: false }
+    }
+});
+
     })
   }
 }
+
+    
+
+
 </script>
+
 
 <style>
 /* Using the bootstrap style, but overriding the font to not draw in

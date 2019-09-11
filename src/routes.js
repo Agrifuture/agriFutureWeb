@@ -30,7 +30,7 @@ const routes = [
         meta: {description: '控制台的总体情况'}
       }, {
         path: 'datacenter',
-        component: TablesView,
+        component: AccessView,
         name: '数据中心',
         meta: {description: '全方位地展示农业生产中的数据'}
       }, {
@@ -45,8 +45,8 @@ const routes = [
         meta: {description: '农民自我记录'}
       }, {
         path: 'analysis',
-        component: AccessView,
-        name: 'Access',
+        component: TablesView,
+        name: 'Analysis',
         meta: {description: '大数据分析农业数据'}
       }, 
       // {

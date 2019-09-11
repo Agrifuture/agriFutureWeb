@@ -1,11 +1,11 @@
 <template>
   <section class="content">
     <div class="row center-block">
-      <h2>Simple</h2>
+      <h2>作物种植进度分析</h2>
       <div class="col-md-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Striped Full Width Table</h3>
+            <h3 class="box-title">各品种植物成熟度</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body no-padding table-responsive">
@@ -13,13 +13,13 @@
               <tbody>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th>品种</th>
+                  <th>进度</th>
+                  <th style="width: 40px"></th>
                 </tr>
                 <tr>
                   <td>1.</td>
-                  <td>Update software</td>
+                  <td>苹果</td>
                   <td>
                     <div class="progress progress-xs">
                       <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
@@ -29,7 +29,7 @@
                 </tr>
                 <tr>
                   <td>2.</td>
-                  <td>Clean database</td>
+                  <td>西红柿</td>
                   <td>
                     <div class="progress progress-xs">
                       <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
@@ -39,7 +39,7 @@
                 </tr>
                 <tr>
                   <td>3.</td>
-                  <td>Cron job running</td>
+                  <td>西瓜</td>
                   <td>
                     <div class="progress progress-xs progress-striped active">
                       <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
@@ -49,7 +49,7 @@
                 </tr>
                 <tr>
                   <td>4.</td>
-                  <td>Fix and squish bugs</td>
+                  <td>青菜</td>
                   <td>
                     <div class="progress progress-xs progress-striped active">
                       <div class="progress-bar progress-bar-success" style="width: 90%"></div>
@@ -66,132 +66,68 @@
     </div>
 
     <div class="row center-block">
-      <h2>Data tables</h2>
-      <div class="col-md-12">
+      <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Data Table With Full Features</h3>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <div class="dataTables_wrapper form-inline dt-bootstrap" id="example1_wrapper">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div id="example1_length" class="dataTables_length">
+            <h3 class="box-title">Responsive Hover Table</h3>
 
-                  </div>
-                </div>
-              </div>
+            <div class="box-tools">
+              <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+                <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-              <div class="row">
-                <div class="col-sm-12 table-responsive">
-                  <table aria-describedby="example1_info" role="grid" id="example1" class="table table-bordered table-striped dataTable">
-                    <thead>
-                      <tr role="row">
-                        <th aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style="width: 167px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting_asc">Rendering engine</th>
-                        <th aria-label="Browser: activate to sort column ascending" style="width: 207px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Browser</th>
-                        <th aria-label="Platform(s): activate to sort column ascending" style="width: 182px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Platform(s)</th>
-                        <th aria-label="Engine version: activate to sort column ascending" style="width: 142px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Engine version</th>
-                        <th aria-label="CSS grade: activate to sort column ascending" style="width: 101px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">CSS grade</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="even" role="row">
-                        <td class="sorting_1">Blink</td>
-                        <td>Iridium  54.0</td>
-                        <td>GNU/Linux</td>
-                        <td>54</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="odd" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Firefox 1.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="even" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Firefox 1.5</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="odd" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Firefox 2.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="even" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Firefox 3.0</td>
-                        <td>Win 2k+ / OSX.3+</td>
-                        <td>1.9</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="odd" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Camino 1.0</td>
-                        <td>OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="even" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Camino 1.5</td>
-                        <td>OSX.3+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="odd" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Netscape 7.2</td>
-                        <td>Win 95+ / Mac OS 8.6-9.2</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="even" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Netscape Browser 8</td>
-                        <td>Win 98SE+</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="odd" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Netscape Navigator 9</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="even" role="row">
-                        <td class="sorting_1">Gecko</td>
-                        <td>Mozilla 1.0</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1</td>
-                        <td>A</td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th colspan="1" rowspan="1">Rendering engine</th>
-                        <th colspan="1" rowspan="1">Browser</th>
-                        <th colspan="1" rowspan="1">Platform(s)</th>
-                        <th colspan="1" rowspan="1">Engine version</th>
-                        <th colspan="1" rowspan="1">CSS grade</th>
-                      </tr>
-                    </tfoot>
-                  </table>
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                 </div>
               </div>
             </div>
-            <!-- /.box-body -->
           </div>
+          <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <th>编号</th>
+                  <th>作物</th>
+                  <th>日期</th>
+                  <th>状态</th>
+                  <th>建议</th>
+                </tr>
+                <tr>
+                  <td>183</td>
+                  <td>苹果</td>
+                  <td>11-7-2014</td>
+                  <td><span class="label label-success">批准</span></td>
+                  <td>苹果树上虫害较多</td>
+                </tr>
+                <tr>
+                  <td>219</td>
+                  <td>土豆</td>
+                  <td>11-7-2014</td>
+                  <td><span class="label label-warning">审批</span></td>
+                  <td>土壤肥力下降，需要补充</td>
+                </tr>
+                <tr>
+                  <td>657</td>
+                  <td>西红柿</td>
+                  <td>11-7-2014</td>
+                  <td><span class="label label-primary">批准</span></td>
+                  <td>适当增加光照时间</td>
+                </tr>
+                <tr>
+                  <td>175</td>
+                  <td>青菜</td>
+                  <td>11-7-2014</td>
+                  <td><span class="label label-danger">否决</span></td>
+                  <td>需要增加灌溉广度和强度</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
         </div>
+        <!-- /.box -->
       </div>
-    </div>
+    </div> 
   </section>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <ul class="sidebar-menu">
-    <li class="header">TOOLS</li>
+    <li class="header">功能</li>
     <router-link tag="li" class="pageLink" to="/">
       <a>
         <i class="fa fa-desktop"></i>

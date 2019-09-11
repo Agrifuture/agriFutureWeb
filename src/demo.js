@@ -53,17 +53,14 @@ export const timeline =
     body: '农田1：使用肥料1，早晚各一次<br>农田2：使用肥料3，中午一次',
     buttons: [{type: 'primary',
       message: '已完成',
-      href: 'https://github.com/misterGF/CoPilot',
       target: '_blank'},
 
       {type: 'primary',
       message: '编辑',
-      href: 'https://github.com/misterGF/CoPilot',
       target: '_blank'},
 
       {type: 'primary',
         message: '删除',
-        href: 'https://github.com/misterGF/CoPilot',
         target: '_blank'}]},
   {
     icon: 'fa-envelope',
@@ -73,17 +70,14 @@ export const timeline =
     body: '农田1：使用肥料1，早晚各一次<br>农田2：使用肥料3，中午一次',
     buttons: [{type: 'primary',
       message: '已完成',
-      href: 'https://github.com/misterGF/CoPilot',
       target: '_blank'},
 
       {type: 'primary',
         message: '编辑',
-        href: 'https://github.com/misterGF/CoPilot',
         target: '_blank'},
 
       {type: 'primary',
         message: '删除',
-        href: 'https://github.com/misterGF/CoPilot',
         target: '_blank'}]},
   {
     icon: 'fa-envelope',
@@ -93,17 +87,14 @@ export const timeline =
     body: '农田4：使用杀虫剂5，4小时一次<br>农田7：使用杀虫剂2，早晚各一次',
     buttons: [{type: 'primary',
       message: '已完成',
-      href: 'https://github.com/misterGF/CoPilot',
       target: '_blank'},
 
       {type: 'primary',
         message: '编辑',
-        href: 'https://github.com/misterGF/CoPilot',
         target: '_blank'},
 
       {type: 'primary',
         message: '删除',
-        href: 'https://github.com/misterGF/CoPilot',
         target: '_blank'}],
 
   }]

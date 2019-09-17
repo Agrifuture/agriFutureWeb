@@ -3,12 +3,13 @@
     <div class="row center-block">
       <h1 class="text-center">计划</h1>
 
-      <ul>
-        <datepicker :readonly="true" format="MMM/D/YYYY"  style="margin-left: 20px" ></datepicker>
+
+<!--        <datepicker :readonly="true" format="MMM/D/YYYY"  style="margin-left: 20px;width: 130px;" ></datepicker>-->
 <!--        <button type="button" class="btn btn-primary"  v-on:click="">确认</button>-->
-        <button type="button" class="btn btn-primary"  v-on:click="" style="margin-left: 690px">添加计划</button>
-        <button type="button" class="btn btn-primary" v-on:click="">选择计划</button>
-      </ul>
+      <div style="height:50px;margin-left: 960px">
+        <button type="button" class="btn btn-primary"  v-on:click="" style="margin-left: 20px;background-color: #477ba1">添加计划</button>
+        <button type="button" class="btn btn-primary" v-on:click="" style="margin-left:10px;background-color: #477ba1">选择计划</button>
+      </div>
 
 
 

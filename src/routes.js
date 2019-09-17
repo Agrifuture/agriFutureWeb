@@ -41,14 +41,14 @@ const routes = [
       }, {
         path: 'record',
         component: SettingView,
-        name: 'Settings',
+        name: '记录',
         meta: {description: '农民自我记录'}
       }, {
         path: 'analysis',
         component: TablesView,
         name: 'Analysis',
         meta: {description: '大数据分析农业数据'}
-      }, 
+      },
       // {
       //   path: 'server',
       //   component: ServerView,
@@ -61,7 +61,7 @@ const routes = [
       //   meta: {description: 'List of popular javascript repos'}
       // },
 
-      // new added 
+      // new added
       {
         path: 'map',
         component: MapView,

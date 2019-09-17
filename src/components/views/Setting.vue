@@ -1,116 +1,76 @@
 <template>
   <div>
-    <h1 class="text-center">Settings</h1>
-    <section class="content">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="box box-info">
-             Input Addons
-            <div class="box-header with-border">
-              <h3 class="box-title">Inputs</h3>
+    <h1 class="text-center">记录</h1>
+
+
+      <section class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box box-info">
+              {{tomorrow}}
+              <input type="button" style="height:30px; line-height:30px; margin-left: 960px;margin-top:5px" value="编辑" />
+              <input type="button" style="height:30px; line-height:30px" value="删除" />
+              <div class="box-header with-border">
+                <h4>农田1 虫害严重</h4>
+              </div>
+              <button type="button" class="btn btn-primary"  v-on:click="" style="background-color: #c7edcc;color: rgba(0,0,0,0.98);'">上传图片</button>
+              <button type="button" class="btn btn-primary"  v-on:click="" style="background-color: #c7edcc;margin-left: 15px;color: rgba(0,0,0,1)">添加位置</button>
             </div>
-
-            <div class="box-body">
-              <!-- calendar group -->
-              <div class="input-group">
-                <datepicker :readonly="true" format="MMM/D/YYYY" id="dateInput" width="100%"></datepicker>
-              </div>
-
-
-              <!-- with characthers -->
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-fw fa-at" aria-hidden="true"></i>
-                </span>
-                <input class="form-control" placeholder="Username" type="text">
-              </div>
-              <br />
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-fw fa-usd" aria-hidden="true"></i>
-                </span>
-                <input class="form-control" type="text">
-                <span class="input-group-addon">.00</span>
-              </div>
-              <br />
-
-              <!-- with icons from font awesome -->
-              <h4>With icons</h4>
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
-                <input class="form-control" placeholder="Email" type="email">
-              </div>
-              <br />
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <span class="input-group-addon"><i class="fa fa-fw fa-check"></i></span>
-              </div>
-              <br>
-
-              <!-- Success/Error heads up input -->
-              <h4>With border indicator</h4>
-              <div class="form-group has-success">
-                <label class="control-label" for="inputSuccess"><i class="fa fa-fw fa-check"></i> Input with success</label>
-                <input class="form-control" id="inputSuccess" placeholder="Enter ..." type="text">
-                <span class="help-block">Help block with success</span>
-              </div>
-              <br />
-              <div class="form-group has-error">
-                <label class="control-label" for="inputError"><i class="fa fa-fw fa-times-circle-o"></i> Input with error</label>
-                <input class="form-control" id="inputError" placeholder="Enter ..." type="text">
-                <span class="help-block">Help block with error</span>
-              </div>
-
-              <!-- select examples -->
-              <h4>Select Options</h4>
-              <div class="form-group">
-                <label>Select</label>
-                <select class="form-control">
-                  <option>option 1</option>
-                  <option>option 2</option>
-                  <option>option 3</option>
-                  <option>option 4</option>
-                  <option>option 5</option>
-                </select>
-              </div>
-              <br />
-              <div class="form-group">
-                <label>Select Multiple</label>
-                <select multiple="" class="form-control">
-                  <option>option 1</option>
-                  <option>option 2</option>
-                  <option>option 3</option>
-                  <option>option 4</option>
-                  <option>option 5</option>
-                </select>
-              </div>
-
-               /input-group
-            </div>
-             /.box-body
           </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box box-info">
+              {{today}}
+              <input type="button" style="height:30px; line-height:30px; margin-left: 960px;margin-top:5px" value="编辑" />
+              <input type="button" style="height:30px; line-height:30px" value="删除" />
+              <div class="box-header with-border">
+                <h4>农田3 需施肥</h4>
+              </div>
+              <button type="button" class="btn btn-primary"  v-on:click="" style="background-color: #c7edcc;color: rgba(0,0,0,0.98);'">上传图片</button>
+              <button type="button" class="btn btn-primary"  v-on:click="" style="background-color: #c7edcc;margin-left: 15px;color: rgba(0,0,0,1)">添加位置</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box box-info">
+              {{yesterday}}
+              <input type="button" style="height:30px; line-height:30px; margin-left: 960px;margin-top:5px" value="编辑" />
+              <input type="button" style="height:30px; line-height:30px" value="删除" />
+              <div class="box-header with-border">
+                <h4>农田6 待采摘</h4>
+              </div>
+              <button type="button" class="btn btn-primary"  v-on:click="" style="background-color: #c7edcc;color: rgba(0,0,0,0.98);'">上传图片</button>
+              <button type="button" class="btn btn-primary"  v-on:click="" style="background-color: #c7edcc;margin-left: 15px;color: rgba(0,0,0,1)">添加位置</button>
+            </div>
+          </div>
+        </div>
+
     </section>
+
+
   </div>
 </template>
 <script>
-require('moment')
-import datepicker from 'vue-date-picker'
+    import moment from 'moment'
 
 export default {
+
   name: 'Settings',
-  components: { datepicker },
   computed: {
-    datetime () {
-      return new Date()
-    }
-  },
-  methods: {
-    clearInput (vueModel) {
-      vueModel = ''
-    }
+      today () {
+          return moment().format('MMMM Do YYYY')
+      },
+      yesterday () {
+          return moment(new Date()).add(-1,'days').format('MMMM Do YYYY');
+      },
+      tomorrow () {
+          return moment(new Date()).add(+1,'days').format('MMMM Do YYYY');
+      }
   }
+
 }
 </script>
 

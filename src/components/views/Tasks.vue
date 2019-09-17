@@ -1,7 +1,6 @@
 <template>
   <section class="content">
     <div class="row center-block">
-      <h1 class="text-center">计划</h1>
 
 
 <!--        <datepicker :readonly="true" format="MMM/D/YYYY"  style="margin-left: 20px;width: 130px;" ></datepicker>-->

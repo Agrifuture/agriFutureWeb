@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/views/Setting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/Setting.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/views/Tasks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/Tasks.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
       <updated>1568117044403</updated>
       <workItem from="1568117045578" duration="159000" />
       <workItem from="1568117372870" duration="4190000" />
-      <workItem from="1568651288165" duration="6593000" />
+      <workItem from="1568651288165" duration="7987000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,13 @@
     <div class="row center-block">
       <h1 class="text-center">计划</h1>
 
+      <ul>
+        <button type="button" class="btn btn-primary" style="margin-left:945px" v-on:click="">添加计划</button>
+        <button type="button" class="btn btn-primary" v-on:click="">选择日期</button>
+      </ul>
+
+
+
       <ul class="timeline">
         <!-- timeline time label -->
         <li class="time-label">
@@ -54,14 +61,18 @@
 <script>
   import moment from 'moment'
   import {timeline} from '../../demo'
-
   export default {
     name: 'Tasks',
+    function:{
+    },
     computed: {
       today () {
         return moment().format('MMMM Do YYYY')
       },
-      yesterday(){
+        Insert(){
+            alert("Hellodreamdu!")
+        },
+        yesterday(){
         return moment(new Date()).add(-1,'days').format('MMMM Do YYYY');
       },
       tomorrow () {

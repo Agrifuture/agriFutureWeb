@@ -51,9 +51,11 @@ export const timeline =
     title: '施肥',
     time: moment().endOf('week').fromNow(),
     body: '农田1：使用肥料1，早晚各一次<br>农田2：使用肥料3，中午一次',
-    buttons: [{type: 'primary',
+    buttons: [
+      {type: 'primary',
       message: '已完成',
-      target: '_blank'},
+      target: '_blank',
+      color: '#00a7d0'},
 
       {type: 'primary',
       message: '编辑',
